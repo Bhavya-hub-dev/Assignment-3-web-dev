@@ -1,108 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal portfolio website">
+    <title>My Portfolio | John Doe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="top">
 
-  <!-- ===== HEADER (Flexbox: logo + nav) ===== -->
-  <header class="header">
-    <div class="logo">My Portfolio</div>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<body>
 
-  <main>
-    <!-- ===== HERO (Flexbox: text left, image right) ===== -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Hi, I am</h1>
-        <h1 class="role">Full Stack Developer</h1>
-        <p>Building modern web applications with MERN stack.</p>
-      </div>
-      <div class="hero-img">
-        <image src="image.jpeg" alt="my photo"></image>
-          <circle cx="100" cy="100" r="100" fill="#bfdbfe"/>
-          <path d="M30 200c0-48 30-70 70-70s70 22 70 70z" fill="#2f5d8f"/>
-          <path d="M88 130h24l-4 30-8 10-8-10z" fill="#fff"/>
-          <path d="M97 140h6l3 22-6 8-6-8z" fill="#d9534f"/>
-          <rect x="88" y="108" width="24" height="26" rx="8" fill="#f8d3c4"/>
-          <ellipse cx="100" cy="84" rx="28" ry="32" fill="#f8d3c4"/>
-          <path d="M72 80c-4-30 14-44 32-42 18 2 26 18 24 42-6-14-16-20-30-20-12 0-20 6-26 20z" fill="#2c4a6b"/>
-      </div>
-    </section>
+    <!-- Header -->
+    <header class="site-header" id="top">
+        <nav class="nav container">
+            <a class="logo" href="#top">My Portfolio</a>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <h2>About Me</h2>
-      <p>Hello! My name is Bhavyaraj Singh Mandloi, and I am currently learning web development. This is my first portfolio website where I showcase my passion for creating interactive and responsive web pages. I am a student at KR Mangalam University, pursuing a B.Tech degree, and I am deeply interested in technology and coding. I love exploring new skills every day, and I always aim to improve my knowledge in the field of web development. With a hardworking and consistent mindset, I am determined to grow as a developer and build creative projects that make a real impact.</p>
-    </section>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- ===== SKILLS (Grid) ===== -->
-    <section class="section" id="skills">
-      <h2>My Skills</h2>
-      <div class="grid skills-grid">
-        <div class="card skill"><h3>HTML</h3><span>Beginner</span></div>
-        <div class="card skill"><h3>CSS</h3><span>Beginner</span></div>
-        <div class="card skill"><h3>JavaScript</h3><span>Learning</span></div>
-      </div>
-    </section>
+    <main>
 
-    <!-- ===== PROJECTS (Grid) ===== -->
-    <section class="section" id="projects">
-      <h2>My Projects</h2>
-      <div class="grid projects-grid">
-        <article class="card project">
-          <h3>Project 1</h3>
-          <p>A simple HTML &amp; CSS webpage.</p>
-        </article>
-        <article class="card project">
-          <h3>Project 2</h3>
-          <p>Another awesome mini project.</p>
-        </article>
-      </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero container">
 
-    <!-- ===== CONTACT ===== -->
-    <section class="section" id="contact">
-      <h2>Contact Me</h2>
-      <form class="form" action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+            <div class="hero-copy">
+                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+                <h1>
+                    Hi, I am
+                    <span>John Doe</span>
+                </h1>
 
-        <label for="message">Message:</label>
-        <textarea id="message" rows="4" placeholder="Write your message" required></textarea>
+                <h2 class="role">Full Stack Developer</h2>
 
-        <button type="submit" class="btn">Send</button>
-      </form>
-    </section>
-  </main>
+                <p class="hero-description">
+                    Building modern web applications with MERN stack.
+                </p>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <p>&copy; 2026 Bhavyaraj Singh Mandloi. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </footer>
+                <a class="primary-button" href="#projects">
+                    View My Work →
+                </a>
+            </div>
 
-  <!-- Back to Top: scrolls to <body id="top"> -->
-  <a href="#top" class="btn back-top">&#8593; Back to Top</a>
+            <div class="profile-wrap">
+                <div class="profile-circle">
+
+                    <!-- Profile Illustration -->
+                    <svg class="avatar" viewBox="0 0 300 300">
+                        <circle cx="150" cy="150" r="145" fill="#cfe3ff"/>
+
+                        <path d="M61 268c9-55 40-82 89-82s80 27 89 82"
+                            fill="#285b7c"/>
+
+                        <path d="M117 185h66l-8 34-25 23-25-23z"
+                            fill="#f3b49b"/>
+
+                        <path d="M111 103c0-45 78-60 94-5l-5 70c-5 29-26 48-50 48s-45-19-50-48z"
+                            fill="#f6c4a9"/>
+
+                        <path d="M105 123c-15-49 10-85 58-85 43 0 67 30 55 79l-12-17-8-25c-22 17-51 22-91 20z"
+                            fill="#263e54"/>
+
+                        <path d="M104 120c-17-5-18 22-4 36l8 5zm112 0c17-5 18 22 4 36l-8 5z"
+                            fill="#f0b49d"/>
+
+                        <circle cx="132" cy="139" r="5" fill="#263e54"/>
+                        <circle cx="177" cy="139" r="5" fill="#263e54"/>
+
+                        <path d="M139 163q12 10 24 0"
+                            fill="none"
+                            stroke="#a75d55"
+                            stroke-width="4"
+                            stroke-linecap="round"/>
+
+                        <path d="M104 268l20-58 26 28 26-28 20 58"
+                            fill="#f4f7fb"/>
+
+                        <path d="M141 239l9-13 9 13-9 29z"
+                            fill="#ef6b55"/>
+                    </svg>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section class="section container" id="about">
+
+            <div class="section-heading">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2>About Me</h2>
+            </div>
+
+            <p class="about-text">
+                Hello! My name is Bhavyaraj Singh Mandloi, and I am currently learning
+                web development. This is my first portfolio website where
+                I showcase my passion for creating interactive and
+                responsive web pages. I am a student with a strong
+                interest in building useful digital experiences.
+                I enjoy learning new technologies and solving problems
+                through code. I have experience in basic web development,
+                and I am always eager to improve my skills and knowledge
+                in the field of web development.
+            </p>
+
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section container" id="skills">
+
+            <div class="section-heading">
+                <p class="eyebrow">WHAT I WORK WITH</p>
+                <h2>My Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <span class="skill-icon">5</span>
+                    <h3>HTML</h3>
+                    <p>Beginner</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon">#</span>
+                    <h3>CSS</h3>
+                    <p>Beginner</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon">JS</span>
+                    <h3>JavaScript</h3>
+                    <p>Learning</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section container" id="projects">
+
+            <div class="section-heading">
+                <p class="eyebrow">SOME THINGS I HAVE MADE</p>
+                <h2>My Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-number">01</div>
+                    <h3>Project 1</h3>
+                    <p>A simple HTML & CSS webpage.</p>
+                    <a href="#contact" class="project-link">
+                        Ask me about it ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-number">02</div>
+                    <h3>Project 2</h3>
+                    <p>Another awesome mini project.</p>
+                    <a href="#contact" class="project-link">
+                        Ask me about it ↗
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">LET'S TALK</p>
+                    <h2>Contact Me</h2>
+                </div>
+
+                <form class="contact-form">
+
+                    <label for="name">Name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Write your message"
+                        required
+                    ></textarea>
+
+                    <button class="primary-button submit-button" type="submit">
+                        Send Message
+                    </button>
+
+                    <p class="form-note"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <p>© 2026 Bhavyaraj Singh Mandloi. All rights reserved.</p>
+
+        <a href="#top" class="back-to-top">
+            ↑ Back to top
+        </a>
+
+    </footer>
 
 </body>
 </html>
